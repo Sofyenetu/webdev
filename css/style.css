@@ -1,94 +1,282 @@
-body {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.6em;
+* {
+    box-sizing: border-box;
+    padding: 0;
     margin: 0;
-}
-
-.container{
-    width: 92%;
-    margin:auto;
-    overflow:hidden;
-
-}
-
-#main-header{
-    background-color: whitesmoke;
-    color: black;
-}
-
-#navbar{
-    background-color: darkslategrey;
-    color: grey;
-    text-align: right;
+    --off-white: .EDEEE9;
     
 }
 
-#navbar ul{
+body {
+    background-color: #fff;
+    font-family: "Assistant", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
+    
+    
+}
+
+.container{
+    width: 80%;
+    margin:auto;
+    overflow:hidden;
+    
+    
+
+}
+
+.header{
+    color: darkslategray;
+}
+
+.navbar{
+    background-color: darkslategrey;
+    color: white;
+    text-align: right;
+    
+    
+}
+
+.navbar ul{
     padding: 0px;;
     list-style: none;
     
 }
 
-#navbar li{
+.navbar li{
     display: inline;
     
 }
 
-#navbar a{
-    color: white;
+.navbar a{
+    color: var(--off-white);
     text-decoration: none;
     font-size: 18px;
     padding-right: 15px;
 }
 
-#showcase{
+.showcase{
     background-image: url(../assets/elec1.jpg);
     background-position:center;
     min-height: 300px;
-    margin-bottom: 30px;
     text-align: center;
-}
-
-#showcase h1{
-    color: #07413a;;
-    font-size: 43px;
-    line-height: 2.6em;
     
 }
 
-#main{
-    float:left;
-    width:60%;
-    padding:0 30px;
-    box-sizing: border-box;
-    margin: 0%;
+.showcase h1{
+    font-size: 2.5em;
+    line-height: 2em;
+    color: darkslategray;
+    padding: 1.5em;
+    
+    text-align: c
 }
 
-#devis-titre{
-    font-weight: bold;
+
+
+.form {
+    
+    margin: auto;
+    max-width: 500px;
+    
+
+}
+
+ .main {
     margin: 0;
+    max-width: 30%;
+    min-width: 300px;
+    display: inline-block;
+    padding-left: 1rem;
+    background-color: bisque;
+
+}
+
+.main h2 {
+  margin: 0.5em 0 0.5em 0;
+  font-weight: bolder;
+  color: darkslategrey
+  
+  
+}
+
+.line hr {
+    border: 4px solid darkslategray;
+    max-width: 3vw;
+    min-width: 80px;
+    margin-top: 25px;
+    padding: 0;
     
 }
 
+.whoami {
+    padding: 1em;
+}
 
-#main-footer{
+
+.main-footer{
     text-align: center;
     padding: 5px;
     margin-top: 230px;
-    background-color: #07413a;
-    color: #FFF;
+    background-color: .07413a;
+    color: var(--off-white);
 }
 
+
+.form {
+    max-width: 768px;
+    display: flex;
+    background-color: darkslategray;
+    align-items: space-around;
+}
+
+.form-left {
+    text-align: left;
+    width: 40%;
+    color: whitesmoke;
+    padding-left: 2.5em;
+    align-content: center;
+    padding-right: 2em;
+    margin-left: 10%;
     
-@media(max-width:600px){
-    #main{
-        width:100%;
-        float:none;
+      
+}
+
+.form-left h3 {
+    font-weight: 800;
+    
+    
+    
+      
+}
+
+.form-left p {
+    text-align: left;
+    color: whitesmoke;
+}
+
+
+label, input {
+    
+    display: grid;
+    color: whitesmoke;
+}
+
+input {
+    background-color: beige; opacity: 50%;
+    color: white;
+    border:  1px solid black ; 
+    border-radius: 2px;
+    height: 2.5em;
+    width: 20em;
+    transition: all 250ms;
+
+}
+
+
+    input {
+        width: clamp(120px, 50vw, 420px);
+        height: 2.5rem;
+        padding: 0 1.25rem;
+        
+        border-radius: 2px;
+        margin: 0.625rem auto;
+        transition: all 250ms;
+        @media (min-width: 768px) {
+          width: clamp(120px, 35vw, 420px);
+        }
     }
 
+
+
+
+    
+  
+
+.form-content {
+    padding: 2em;
     
 }
+
+&:focus {
+    outline: none;
+    border-top-color: rgba(0,0,0,0.1);
+  }
+  
+  
+  /* When the input field (.form__input) is in focus, 
+     transform the .form__label and change colors*/
+  /* ALSO, if the input field's placeholder is NOT shown (when the input field has content),
+     transform the .form__label and change colors. */
+  &:focus + .form__label, &:not(:placeholder-shown) + .form__label {
+    transform: translateY(-4.50rem) scale(1);
+    color: black;
+  }
+  
+  /* THIS PART IS IMPORTANT!! */
+  /* The block below hides the placeholder entirely. */
+  /* For all intents and purposes, the placeholder no longer exists. */
+  /* What shows on the input field is only the label*. */
+  /* HOWEVER, the input fields still recognizes that the placeholder exists!*/
+  /* The placeholder is just invisible. We need the placeholder to exist for
+     some weird CSS stuff. If we skip this, we can't make it CSS-only. */
+  &::placeholder {
+      display: none;
+      color: transparent;
+    
+      
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
+  }
+  
+  /* When the placeholder is NOT shown,
+     style the top border. */
+  /* This makes the top border fade-out when the placeholder disappears. */
+  &:not(:placeholder-shown) {
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+
+
+.form__label {
+  font-size: 1rem;
+  color: grey;
+  display: block;
+  
+  /* Moves the label on TOP of the placeholder */
+  /* You'll need to change this as needed */
+  transform: translate(1.25rem,-2.5rem);
+  transform-origin: 0 0; /* Used later for transitions */
+  transition: all 500ms;
+  
+  
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  
+  /* THIS PART IS IMPORTANT! */
+  /* This line prevents the label from being selected.*/
+  /* This is crucial because if this line doesn't exist, users can
+     click on the label, instead of the input field. That's bad UX! */
+  pointer-events: none; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
 
 

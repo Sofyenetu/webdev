@@ -4,18 +4,20 @@
         <meta charset="UTF-8">
         <meta name="author" content="abusofyen">
         <title>electricien</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+            </style>
     </head>
     <body>
-        <header id="main-header">
+        <header class="header">
             <div class="container">
                 <img src="assets/logo.png" alt= "jabelec logo">
             </div>
         </header>
 
         
-        <nav id="navbar">
+        <nav class="navbar">
         <div class="container">
             <ul>
                 <li><a href="https://twitch.tv/black_bears007" target="_blank">twitch</a></li>
@@ -27,29 +29,45 @@
         </nav>
         
 
-        <section id="showcase">
+        <section class="showcase">
         <div class="container">
             <h1>Un technicien qui saura vous reconcilier avec l'electricité</h1>
         </div>
         </section>
-        <section id="main">
-        <h1>Jabelec à votre service</h1>
-        <p>blabliblou jabelec le meilleur lalala i gonnna do 1k no your not good guy thank you day after monday ou know your welcome.</p>
-        </section>
-
-        <div id="sidebar">
-            <p id="devis-titre">demander un devis:</p>
-            <input type="text" required value="email"/>
-            <input type="text" value="nom/prenom"/>
-            <input type="text" value="téléphone"/>
-            <input type="text" value="adresse"/>
+        <div class="content">
         
-            <textarea id=textbox> "detaillez votre demande"</textarea>
-          
-            <button id="envoyer">envoyer</button>
+        <section class="main">
+        <h2>Jabelec à votre service</h2>
+        <div class="line"><hr></div>
+        <article class="whoami">blabliblou jabelec le meilleur lalala i gonnna do 1k no your not good guy thank you day after monday ou know your welcome.</article>
+        </section>
+        <div class="form">
+            <div class="form-left">
+                <h3>Demander un devis:</h3>
+                <p>for any demands please contact Lorem ipsum dolor sit ame pour toute demande balalalalalalblibo</p>
+            </div>
+            <div class="form-content">
+                <form>
+                
+                    
+                    
+                        <label class="form_label">nom: <input type="text" placeholder="nom"/></label>    
+                        <label class="form_label">email: <input type="text" placeholder="mail"></label>
+                        <label class="form_label">tel: <input type="text" placeholder="tel"/></label>    
+                        <label class="form_label">adresse: <input type="text" placeholder="adresse"/></label>    
+                    
+                    
+                        <label class="form_label">
+                            <textarea class=textbox> "detaillez votre demande"</textarea>
+                        </label>
+                    
+                    <button class="envoyer">envoyer</button>
+                </form>
+            </div>
+        </div>
         </div>
     </body>
-    <footer id="main-footer">
+    <footer class="main-footer">
         <p>Copyright 2024 Jabelec studio; v.0</p>
     </footer>
     <!--comment space
