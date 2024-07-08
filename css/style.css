@@ -129,6 +129,8 @@ body {
     display: flex;
     background-color: darkslategray;
     align-items: space-around;
+    padding: 2em;
+    text-align: center;
 }
 
 .form-left {
@@ -138,16 +140,12 @@ body {
     padding-left: 2.5em;
     align-content: center;
     padding-right: 2em;
-    margin-left: 10%;
     
       
 }
 
 .form-left h3 {
     font-weight: 800;
-    
-    
-    
       
 }
 
@@ -157,32 +155,94 @@ body {
 }
 
 
-label, input {
-    
-    display: grid;
-    color: whitesmoke;
-}
-
-input {
-    background-color: beige; opacity: 50%;
-    color: white;
-    border:  1px solid black ; 
+ 
+.placeholder-text {
+    color: darkslategray;
+    opacity: 100;
+    font-weight: lighter;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    font-size: 0.8rem;
     border-radius: 2px;
-    height: 2.5em;
-    width: 20em;
-    transition: all 250ms;
+    padding: 5px;
+    color: white;
+    opacity: 90%;
+    
 
 }
+
+
+
 
 
     input {
+        display: grid;
         width: clamp(120px, 50vw, 420px);
         height: 2.5rem;
         padding: 0 1.25rem;
-        
+        background-color: beige; opacity: 50%;
+        border: 1px solid black;
+        color: darkcyan ;
+        font-weight: lighter;
         border-radius: 2px;
         margin: 0.625rem auto;
-        transition: all 250ms;
+        @media (min-width: 768px) {
+          width: clamp(120px, 35vw, 420px);
+        }
+    }
+
+
+    
+     input::placeholder {
+        transition: 0.5s ease-in-out;
+        color: darkcyan;
+        font-weight: bold; opacity: 80%;
+        font-style: italic;
+        
+
+    }
+
+     input:focus::placeholder {
+        opacity: 0;
+        
+
+    }
+
+    input:focus {
+        background: white;
+        opacity: 40%;
+        transition: 0.2s ease-in-out;
+        border: none;
+    }
+
+     input:focus ~ .placeholder-text {
+        opacity: 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        border-bottom: 2px solid white;
+        
+        
+
+    }
+
+    .form-content {
+    padding: 2em;
+    
+    }
+
+    .textbox {
+
+        display: grid;
+        width: clamp(120px, 50vw, 420px);
+        margin-top: 3rem;
+        height: 5rem;
+        padding: 0 1.25rem;
+        border: 1px solid black;
+        color: darkcyan ;
+        font-weight: lighter;
+        text-align: center;
+        border-radius: 4px;
+        opacity: 60%;
         @media (min-width: 768px) {
           width: clamp(120px, 35vw, 420px);
         }
@@ -191,76 +251,10 @@ input {
 
 
 
-    
-  
-
-.form-content {
-    padding: 2em;
-    
-}
-
-&:focus {
-    outline: none;
-    border-top-color: rgba(0,0,0,0.1);
-  }
-  
-  
-  /* When the input field (.form__input) is in focus, 
-     transform the .form__label and change colors*/
-  /* ALSO, if the input field's placeholder is NOT shown (when the input field has content),
-     transform the .form__label and change colors. */
-  &:focus + .form__label, &:not(:placeholder-shown) + .form__label {
-    transform: translateY(-4.50rem) scale(1);
-    color: black;
-  }
-  
-  /* THIS PART IS IMPORTANT!! */
-  /* The block below hides the placeholder entirely. */
-  /* For all intents and purposes, the placeholder no longer exists. */
-  /* What shows on the input field is only the label*. */
-  /* HOWEVER, the input fields still recognizes that the placeholder exists!*/
-  /* The placeholder is just invisible. We need the placeholder to exist for
-     some weird CSS stuff. If we skip this, we can't make it CSS-only. */
-  &::placeholder {
-      display: none;
-      color: transparent;
-    
-      
-      -webkit-user-select: none; /* Safari */
-      -ms-user-select: none; /* IE 10 and IE 11 */
-      user-select: none; /* Standard syntax */
-  }
-  
-  /* When the placeholder is NOT shown,
-     style the top border. */
-  /* This makes the top border fade-out when the placeholder disappears. */
-  &:not(:placeholder-shown) {
-    border-top-color: rgba(0, 0, 0, 0.5);
-  }
 
 
-.form__label {
-  font-size: 1rem;
-  color: grey;
-  display: block;
-  
-  /* Moves the label on TOP of the placeholder */
-  /* You'll need to change this as needed */
-  transform: translate(1.25rem,-2.5rem);
-  transform-origin: 0 0; /* Used later for transitions */
-  transition: all 500ms;
-  
-  
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-  
-  /* THIS PART IS IMPORTANT! */
-  /* This line prevents the label from being selected.*/
-  /* This is crucial because if this line doesn't exist, users can
-     click on the label, instead of the input field. That's bad UX! */
-  pointer-events: none; 
-}
+
+
 
 
 
