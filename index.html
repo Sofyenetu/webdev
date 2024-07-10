@@ -11,25 +11,41 @@
     </head>
     <body>
         <header class="header">
-            <div class="container">
-                <img src="assets/logo.png" alt= "jabelec logo">
+            
+        
+
+            <div class="wrapper">
+            <nav class="navbar">
+            <img class="logo" src="assets/logo.png" alt= "jabelec logo">
+               
+                <div class="nav-links">
+                <ul>
+                    <li><a href="https://twitch.tv/black_bears007" target="_blank">Twitch</a></li>
+                    <li><a href="page2.html">Mes clients</a></li>
+                    <li><a href="page3.html">About me</a></li>
+                    <li><a href="page3.html">Partenaires</a></li>
+                </ul>
+                </div>
+                <svg class="burger-menu" alt="burger-menu" viewBox="0 0 100 80" width="40" height="40">
+                    <rect width="100" height="15" rx="12"></rect>
+                    <rect y="30" width="100" height="15" rx="12"></rect>
+                    <rect y="60" width="100" height="15" rx="12"></rect>
+                  </svg>
+                  <script>
+                    const menuHamburger = document.querySelector(".burger-menu")
+                    const navLinks = document.querySelector(".nav-links")
+             
+                    menuHamburger.addEventListener('click',()=>{
+                    navLinks.classList.toggle('mobile-menu')
+                    })
+                  </script>
+            </nav>
             </div>
         </header>
-
-        
-        <nav class="navbar">
-        <div class="container">
-            <ul>
-                <li><a href="https://twitch.tv/black_bears007" target="_blank">twitch</a></li>
-                <li><a href="page2.html">mes clients</a></li>
-                <li><a href="page3.html">about me</a></li>
-                <li><a href="page3.html">partenaires</a></li>
-            </ul>
-        </div>
-        </nav>
         
 
         <section class="showcase">
+            
         <div class="container">
             <h1>Un technicien qui saura vous reconcilier avec l'electricité</h1>
         </div>
@@ -39,7 +55,10 @@
         <section class="main">
         <h2>Jabelec à votre service</h2>
         <div class="line"><hr></div>
-        <article class="whoami">blabliblou jabelec le meilleur lalala i gonnna do 1k no your not good guy thank you day after monday ou know your welcome.</article>
+        <article class="whoami">blabliblou jabelec le meilleur lalala i gonnna do 1k no your not good guy thank you day after monday ou know your welcome. 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem obcaecati laboriosam quisquam necessitatibus recusandae, debitis 
+            atque nam minima provident adipisci quia voluptas, laborum omnis, autem libero dicta ut totam odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus a atque facere blanditiis in odio ut optio culpa dolorem, facilis repellat sequi,
+             consequatur doloribus, ducimus </article>
         </section>
         <div class="form">
             <div class="form-left">
@@ -47,16 +66,16 @@
                 <p>for any demands please contact Lorem ipsum dolor sit ame pour toute demande balalalalalalblibo</p>
             </div>
             <div class="form-content">
-                <form>
+                <form >
                 
                     <span class="placeholder-text">Nom:</span>
-                    <input type="text" placeholder="nom"/>
+                    <input type="text" placeholder="nom" required="yes"/>
                     <span class="placeholder-text">Email:</span>
-                    <input type="text" placeholder="mail">
+                    <input type="text" placeholder="mail" required="yes">
                     <span class="placeholder-text">Tel:</span>
-                    <input type="text" placeholder="tel"/>    
-                    <span class="placeholder-text">Adresse:</span>
-                    <input type="text" placeholder="adresse"/>    
+                    <input type="tel" placeholder="tel" required="yes"/>    
+                    <span class="placeholder-text" required="yes">Adresse:</span>
+                    <input type="text" placeholder="adresse" required="yes"/>    
                     
                         
                            
@@ -64,9 +83,11 @@
                     
                         
                             
-                        
-                    <textarea class=textbox required="yes" > </textarea>
-                    <button class="envoyer">envoyer</button>
+                    <span class ="placeholder-text">Detaillez votre demande</span>    
+                    <textarea class=textbox required="yes" placeholder="detailler votre demande" minlength="60" spellcheck="true" > </textarea>
+                    <div class="submit-btn">
+                    <button class="btn">envoyer</button>
+                    </div>
                 </form>
             </div>
         </div>

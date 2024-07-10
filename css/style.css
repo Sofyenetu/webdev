@@ -2,13 +2,16 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    --off-white: .EDEEE9;
+    --base: #f7f7f7;
+    --mid-green: #a3e635;
+    --green: #16a34a;
+    --blue: #155e75;
     
 }
 
 body {
-    background-color: #fff;
-    font-family: "Assistant", Helvetica, sans-serif;
+    background-color: var(--base);
+    font-family: "roboto", Helvetica, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6em;
@@ -18,59 +21,147 @@ body {
 }
 
 .container{
-    width: 80%;
+    width: 85%;
     margin:auto;
     overflow:hidden;
     
+
+}
+
+
+
+header {
+    height: 120px;
     
-
 }
 
-.header{
-    color: darkslategray;
+
+
+
+.logo {
+    float: left;
+    width: 160px;
+    margin-top: 36px; 
+    
 }
+
+header ul {
+    float: right;
+}
+
 
 .navbar{
-    background-color: darkslategrey;
-    color: white;
-    text-align: right;
-    
+    color: black;
+    display: flex;
+    justify-content:space-around
     
 }
 
 .navbar ul{
-    padding: 0px;;
+    
     list-style: none;
     
 }
 
 .navbar li{
-    display: inline;
-    
+    display: inline-block;
+    margin-top: 50px;
+     
 }
 
 .navbar a{
     color: var(--off-white);
     text-decoration: none;
-    font-size: 18px;
-    padding-right: 15px;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-right: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    
+    
 }
 
-.showcase{
-    background-image: url(../assets/elec1.jpg);
-    background-position:center;
-    min-height: 300px;
+.navbar .burger-menu {
+    display: none;
+    width: 30px;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+}
+
+
+
+
+
+@media screen and (max-width:650px) {
+      .navbar .burger-menu{
+        display: block;
+      }
+      
+      .nav-links {
+        position: absolute;
+        flex-direction: column;
+        width:100%;
+        height:100vh;
+        padding:0;
+        margin:0;
+        top:0;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(183, 188, 188, 0.729);
+        backdrop-filter: blur(5px);
+        margin: 15px 0;
+        font-size: 24px;
+        font-weight: 400;
+        margin-left: -100%;
+      }
+
+      .nav-links.mobile-menu {
+        margin-left: 0;
+      }
+
+      .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      
+    }
+
+    
+
+
+.navbar a:hover {
+    transition: 0.3s;
+    color: rgba(31,151,153,1);
+    padding: 5px;
+    border-left: 2px solid rgba(31,151,153,1);
+    border-right: 2px solid rgba(31,151,153,1);
+    border-radius: 5px;
+} 
+.showcase {
+    background-image: url('../assets/alpes.jpg');
     text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 580px;
+    
     
 }
 
-.showcase h1{
-    font-size: 2.5em;
+.container h1{
+    font-size: 35px;
+    text-transform: uppercase;
     line-height: 2em;
-    color: darkslategray;
-    padding: 1.5em;
+    color: var(--base);
+    text-align: center;
+    margin: 70px 0 40px 0;
     
-    text-align: c
 }
 
 
@@ -79,8 +170,8 @@ body {
     
     margin: auto;
     max-width: 500px;
-    
-
+    background: rgb(31,151,153);
+    background: linear-gradient(0deg, rgba(31,151,153,1) 0%, rgba(150,146,8,1) 100%);
 }
 
  .main {
@@ -88,21 +179,22 @@ body {
     max-width: 30%;
     min-width: 300px;
     display: inline-block;
-    padding-left: 1rem;
-    background-color: bisque;
+    padding: 2rem 1rem 2rem 1rem;
+    background-color: var(--blue);
+    
 
 }
 
 .main h2 {
   margin: 0.5em 0 0.5em 0;
   font-weight: bolder;
-  color: darkslategrey
+  color: white;
   
   
 }
 
 .line hr {
-    border: 4px solid darkslategray;
+    border: 4px solid white;
     max-width: 3vw;
     min-width: 80px;
     margin-top: 25px;
@@ -112,6 +204,8 @@ body {
 
 .whoami {
     padding: 1em;
+    color: white;
+    text-justify: distribute;
 }
 
 
@@ -127,10 +221,10 @@ body {
 .form {
     max-width: 768px;
     display: flex;
-    background-color: darkslategray;
+    background-color: var(--iceberg);
     align-items: space-around;
-    padding: 2em;
-    text-align: center;
+    padding: 2em 0;
+    
 }
 
 .form-left {
@@ -157,35 +251,33 @@ body {
 
  
 .placeholder-text {
-    color: darkslategray;
-    opacity: 100;
+    
+    opacity: 100%;
     font-weight: lighter;
     transition: 0.5s ease-in-out;
-    text-align: center;
-    font-size: 0.8rem;
-    border-radius: 2px;
-    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
     color: white;
-    opacity: 90%;
+
+    
     
 
 }
-
-
-
 
 
     input {
         display: grid;
         width: clamp(120px, 50vw, 420px);
         height: 2.5rem;
-        padding: 0 1.25rem;
+        padding: 0 1rem;
         background-color: beige; opacity: 50%;
         border: 1px solid black;
         color: darkcyan ;
         font-weight: lighter;
         border-radius: 2px;
-        margin: 0.625rem auto;
+        margin: 0.425rem auto;
         @media (min-width: 768px) {
           width: clamp(120px, 35vw, 420px);
         }
@@ -203,50 +295,92 @@ body {
     }
 
      input:focus::placeholder {
-        opacity: 0;
+        transform: translate(1.25rem, -2.5rem);
+        
+        
         
 
     }
 
     input:focus {
         background: white;
-        opacity: 40%;
+        opacity: 100%;
         transition: 0.2s ease-in-out;
-        border: none;
+
     }
 
      input:focus ~ .placeholder-text {
         opacity: 0;
-        font-size: 1.5rem;
-        font-weight: 300;
-        border-bottom: 2px solid white;
+        font-size: 1rem;
+        color: #fff;
         
         
 
     }
 
-    .form-content {
-    padding: 2em;
     
-    }
 
     .textbox {
 
         display: grid;
         width: clamp(120px, 50vw, 420px);
-        margin-top: 3rem;
-        height: 5rem;
+        
+        height: 10rem;
         padding: 0 1.25rem;
         border: 1px solid black;
-        color: darkcyan ;
-        font-weight: lighter;
+        color: darkcyan;
+        font-weight: 400;
+        font-size: 0.rem;
         text-align: center;
         border-radius: 4px;
         opacity: 60%;
         @media (min-width: 768px) {
           width: clamp(120px, 35vw, 420px);
+          
         }
     }
+
+    .textbox:focus {
+        background-color: white;
+        opacity: 100;
+        transition: 0.5ms ease-in-out;
+
+    }
+
+    .btn {
+
+        text-align: center;
+        font-weight:600;
+        text-decoration: none;
+        letter-spacing: -0.05em;
+        background-color: var(--blue);
+        color: #fff;
+        padding: 0.5em 1em;
+        border-radius: 6px;
+        box-shadow: 0 10px 20px rgba(8, 188, 243, 0.9),0 6px 6px 
+        rgba(7, 188, 243, 0.9), 0 0 100px -10px rgb(5, 191, 247);
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin: 1em;
+
+    }
+
+    .btn:hover {
+        transform:translateY(-3px);
+        box-shadow: 0 14px 28px rgb(19, 95, 118, 0.4),0 10px 10px 
+        rgb(19, 95, 118, 0.22), 0 0 120px -10px rgb(19, 95, 118);
+
+    }
+
+    .submit-btn {
+        text-align: center;
+    }
+
+
+
+
+
+
+
 
 
 
