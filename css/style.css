@@ -6,7 +6,13 @@
     --mid-green: #a3e635;
     --green: #16a34a;
     --blue: #155e75;
+    --grey: #3f3f46;
+
     
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,6 +22,7 @@ body {
     font-size: 16px;
     line-height: 1.6em;
     margin: 0;
+    margin-inline: auto;
     
     
 }
@@ -28,8 +35,28 @@ body {
 
 }
 
+.scroll-devis {
+    text-decoration: none;
+    color: white;
+    padding: 20px 15px;   
+}
 
 
+
+.hero-btn {
+    border-radius: 6px;
+    padding: 17px 5px;
+    border:none;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    background-color: #3f3f46;
+    font-weight: 400;
+    box-shadow: none;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+}
 header {
     height: 120px;
     
@@ -51,7 +78,7 @@ header ul {
 
 
 .navbar{
-    color: black;
+    color: #3f3f46;
     display: flex;
     justify-content:space-around
     
@@ -77,6 +104,7 @@ header ul {
     margin-right: 15px;
     display: inline-block;
     text-transform: uppercase;
+    opacity: 85%;
     
     
 }
@@ -96,6 +124,7 @@ header ul {
 @media screen and (max-width:650px) {
       .navbar .burger-menu{
         display: block;
+        
       }
       
       .nav-links {
@@ -116,6 +145,8 @@ header ul {
         font-size: 24px;
         font-weight: 400;
         margin-left: -100%;
+        transition: all 0.5s ease-in-out;
+        
       }
 
       .nav-links.mobile-menu {
@@ -152,6 +183,7 @@ header ul {
     height: 580px;
     
     
+    
 }
 
 .container h1{
@@ -166,6 +198,43 @@ header ul {
 
 
 
+
+ .content {
+    padding: 40px 15px;
+    background-color: rgba(211, 211, 211, 0.575);
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+ }
+
+
+ 
+
+
+
+.main h2 {
+  font-weight: bolder;
+  color: var(--grey);
+  
+  
+  
+}
+
+.line hr {
+    border: 2px solid var(--grey);
+    border-radius: 3px;
+    margin-top: 6px;
+    margin-bottom: 1em;
+    
+}
+
+.whoami {
+    color: --grey;
+    margin: 0 1.5em 0 0;
+}
+
 .form {
     
     margin: auto;
@@ -174,39 +243,7 @@ header ul {
     background: linear-gradient(0deg, rgba(31,151,153,1) 0%, rgba(150,146,8,1) 100%);
 }
 
- .main {
-    margin: 0;
-    max-width: 30%;
-    min-width: 300px;
-    display: inline-block;
-    padding: 2rem 1rem 2rem 1rem;
-    background-color: var(--blue);
-    
-
-}
-
-.main h2 {
-  margin: 0.5em 0 0.5em 0;
-  font-weight: bolder;
-  color: white;
-  
-  
-}
-
-.line hr {
-    border: 4px solid white;
-    max-width: 3vw;
-    min-width: 80px;
-    margin-top: 25px;
-    padding: 0;
-    
-}
-
-.whoami {
-    padding: 1em;
-    color: white;
-    text-justify: distribute;
-}
+ 
 
 
 .main-footer{
@@ -214,14 +251,12 @@ header ul {
     padding: 5px;
     margin-top: 230px;
     background-color: .07413a;
-    color: var(--off-white);
 }
 
 
 .form {
     max-width: 768px;
     display: flex;
-    background-color: var(--iceberg);
     align-items: space-around;
     padding: 2em 0;
     
@@ -357,8 +392,6 @@ header ul {
         color: #fff;
         padding: 0.5em 1em;
         border-radius: 6px;
-        box-shadow: 0 10px 20px rgba(8, 188, 243, 0.9),0 6px 6px 
-        rgba(7, 188, 243, 0.9), 0 0 100px -10px rgb(5, 191, 247);
         transition: transform 0.3s, box-shadow 0.3s;
         margin: 1em;
 
@@ -366,13 +399,13 @@ header ul {
 
     .btn:hover {
         transform:translateY(-3px);
-        box-shadow: 0 14px 28px rgb(19, 95, 118, 0.4),0 10px 10px 
-        rgb(19, 95, 118, 0.22), 0 0 120px -10px rgb(19, 95, 118);
+        
 
     }
 
     .submit-btn {
         text-align: center;
+        
     }
 
 
