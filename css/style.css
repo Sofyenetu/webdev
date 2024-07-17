@@ -199,7 +199,39 @@ header ul {
 
 
 
- .content {
+
+
+
+ .services {
+    display: flex;
+    padding: 2em 1em;
+    align-items: center;
+    justify-content: center;
+
+    
+    }
+
+    
+
+.service-box  {
+    padding: 30px;
+}
+
+.service-box h3 {
+    
+    padding: 10px;
+}
+
+
+
+.service-img{
+    height: 60px;
+    
+}
+ 
+
+
+.content {
     padding: 40px 15px;
     background-color: rgba(211, 211, 211, 0.575);
     justify-content: center;
@@ -208,11 +240,6 @@ header ul {
     margin-right: auto;
     max-width: 90%;
  }
-
-
- 
-
-
 
 .main h2 {
   font-weight: bolder;
