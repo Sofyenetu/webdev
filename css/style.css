@@ -87,12 +87,13 @@ header ul {
 .navbar ul{
     
     list-style: none;
-    
+    display: inline-block;
 }
 
 .navbar li{
     display: inline-block;
     margin-top: 50px;
+    
      
 }
 
@@ -101,10 +102,10 @@ header ul {
     text-decoration: none;
     font-size: 16px;
     font-weight: bolder;
-    margin-right: 15px;
-    display: inline-block;
+    
     text-transform: uppercase;
     opacity: 85%;
+    margin-left: 40px;
     
     
 }
@@ -174,16 +175,18 @@ header ul {
     border-right: 2px solid rgba(31,151,153,1);
     border-radius: 5px;
 } 
+
+
+
+
 .showcase {
-    background-image: url('../assets/alpes.jpg');
-    text-align: center;
+    background-image: url('../assets/alpes2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
     height: 580px;
-    
-    
-    
+
 }
 
 .container h1{
