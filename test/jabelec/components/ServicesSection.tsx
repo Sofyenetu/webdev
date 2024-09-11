@@ -65,7 +65,7 @@ export default function ServicesSection() {
         <h2 className="text-4xl font-bold text-center mb-12 text-black">Nos Services</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <AnimatePresence>
-            {services.map((service, index) => (
+            {services.map((service, _index) => (
               <motion.div
                 key={service.title}
                 layout
